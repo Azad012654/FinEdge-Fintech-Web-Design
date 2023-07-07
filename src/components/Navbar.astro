@@ -1,0 +1,63 @@
+---
+import HomePage from "../pages/HomePage.astro";
+---
+
+<main class="main-container">
+    <ul class="menu-items">
+        <div class="items"><a href="/HomePage/">Home</a></div>
+        <div class="items"><a href="/Services/">Services</a></div>
+        <div class="items"><a href="/ContactUs/">About Us</a></div>
+        <div class="items"><a href="/AboutUs">Contact Us</a></div>
+    </ul>
+</main>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+.main-container{
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+}
+.menu-items{
+    display:flex;
+    font-family: monospace;
+    background-size: 100%;
+    
+    
+}
+.menu-items a{
+    
+    color:white;
+    text-decoration: none;
+    padding-left: 40px;
+    font-weight: bold;
+    
+    
+}
+.menu-items a:hover{
+    border-image: linear-gradient(#f6b73c, #4d9f0c) 20;
+border-width: 4px;
+border-style: solid;
+}
+.items{
+    font-size: x-large;
+    
+}
+
+@media  screen and (max-width:780px) {
+    .menu-items .items {
+   width: auto;
+   padding-right: 5%;
+   margin: 0;
+   
+   }
+}
+</style>

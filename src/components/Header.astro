@@ -1,0 +1,63 @@
+---
+import Navbar from "./Navbar.astro";
+---
+
+<main class="container">
+    <div class="topbar">
+        <h1 class="company-logo">FinEdge</h1>
+        <div class="company-logo" >
+
+        </div>
+        <div class="button_container">
+            <button class="login_button">Log In</button>
+            <button class="register_button">Register</button>
+
+        </div>
+
+
+    </div>
+    <Navbar />
+</main>
+<style>
+    .container{
+        background-color: white;
+    }
+    .company-logo{
+        background-image: url('https://www.canva.com/design/DAFnqytS9Fg/5ugLaWXzvvLSRYANAERKXw/view?utm_content=DAFnqytS9Fg&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel');
+        
+    }
+    .topbar{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .login_button{
+        background-color: black;
+        color:aliceblue;
+        width:100px;
+        height:3rem;
+        font-size: large;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-right: 20px;
+        border-radius:9px;
+        
+    }
+    .register_button{
+        background-color: black;
+        color:aliceblue;
+        width:100px;
+        height:3rem;
+        font-size: large;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius:9px;
+        margin-right:20px;
+    }
+    .register_button:hover{
+        background-color:white;
+        color:black;
+    }
+    .login_button:hover{
+        background-color:white;
+        color:black;
+    }
+</style>

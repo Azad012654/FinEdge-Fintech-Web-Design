@@ -1,0 +1,135 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Header />
+<main>
+    <p class="typewriter">FinEdge is a cutting-edge fintech startup focused on transforming cross-border payments</p>
+    <p class="typewriter"> They believe in a world where geographic boundaries should not limit individuals and businesses from making seamless transactions.</p>
+    <button style="float:left" id="explore" class="typewriter">Explore</button>
+</main>
+<Footer />
+
+<style>
+    body{
+        margin:0;
+        box-sizing: border-box;
+    }
+    Header{
+        height:20vh;
+    }
+    Footer{
+        height:20vh;
+    }
+    main{
+        flex:0.6;
+        display:flex;
+        height: 80vh;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        /* height:100vh; */
+        width:100%;
+        color:black;
+        text-shadow: -1px -1px 0 rgb(255, 255, 255), 2px -1px 0 whitesmoke, -1px 1px 0 white, 1px 1px 0 white;
+        background-image: url('https://media.istockphoto.com/id/1287325029/photo/abstract-white-and-gray-gradient-background.webp?b=1&s=170667a&w=0&k=20&c=pTYI24RhbxR6er-n-P-IGVVzwuFRTNT1AaMvfUy0ffw=');
+        background-size: cover;
+        background-position: center;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        /* background: rgb(45,216,248); */
+/* background: linear-gradient(356deg, rgba(45,216,248,1) 0%, rgba(13,33,142,1) 47%, rgba(101,213,255,1) 100%); */
+        
+    }
+    .typewriter{
+        text-align: left;
+        font-weight: bolder;
+        font-size:40px;
+        width:60%;
+        font-family:monospace;
+    }
+main .typewriter:nth-child(1){
+
+    /* border-right: 2px solid black; */
+    transform :translateY(100%);
+    animation: typing1 2s forwards;
+    
+
+     /* overflow : hidden; */
+}
+main .typewriter:nth-child(2){
+    
+    
+    /* border-right: 2px solid black; */
+    animation: typing2 3s forwards;
+    margin-top:3rem;
+     /* overflow : hidden; */
+}
+
+main .typewriter:nth-child(3){
+    animation: typing3 3s forwards;
+    min-width: 100px;
+    max-width: 200px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top:3rem;
+}
+
+main .typewriter:nth-child(3):hover{
+    background-color: rgb(3, 3, 3);
+    color:rgb(248, 242, 242);
+    
+}
+
+
+
+    @keyframes typing1 {
+        0% {opacity:0% ; transform :translateX(100vh) }
+        50%{opacity:50% ;}
+        100%{
+            opacity:100% ; transform :translateY(0vh);
+        }
+    }
+
+    @keyframes typing2 {
+        0% {opacity:0% ; transform :translateX(-100vh) }
+        50%{opacity:50% ;}
+        100%{
+            opacity:100% ; transform :translateX(0vh);
+        }
+    }
+
+    @keyframes typing3 {
+        0% {opacity:0% ; transform :translateY(100vh) }
+        50%{opacity:50%}
+        100%{
+            opacity:100% ; transform :translateY(0vh); 
+        }
+    }
+
+    @media screen and(max-width:400px){
+        .typewriter{
+            font-size: medium;
+            color:green;
+        }
+    }
+</style>
+<script>
+
+let btn1 = document.getElementById('explore');
+
+btn1.addEventListener('click', ()=>{
+    btn1.style.backgroundColor="white";
+    btn1.style.color="black";
+    setTimeout(()=>{
+        btn1.style.backgroundColor="black";
+    btn1.style.color="white";
+    },50)
+    
+
+    console.log("Button Test")
+})
+
+
+</script>

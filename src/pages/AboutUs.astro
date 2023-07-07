@@ -1,0 +1,188 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
+import LocalPhoneTwoToneIcon from '@mui/icons-material/LocalPhoneTwoTone';
+import AlternateEmailTwoToneIcon from '@mui/icons-material/AlternateEmailTwoTone';
+---
+
+<Header />
+<main>
+    <div class="left">
+        <div class="address">
+            <HomeTwoToneIcon height="4rem" width="4rem" />
+            
+            <div class="address-fonts">
+                <div>Address</div>
+                <div>
+                    No. 14, 2nd Floor, 37th A Cross, 1st Main Rd, 8th Block,
+                    Jayanagar, Bengaluru, Karnataka 560070
+                </div>
+            </div>
+        </div>
+        <div class="address">
+            <LocalPhoneTwoToneIcon height="3rem" width="3rem" />
+            <div class="address-fonts">
+                <div>Phone Number</div>
+                <div>
+                    +91-9864000000
+                </div>
+                <div>
+                    +91-9864500000
+                </div>
+            </div>
+        </div>
+        <div class="address">
+            <AlternateEmailTwoToneIcon height="3rem" width="3rem" />
+            <div class="address-fonts">
+                <div>Email address</div>
+                <div>
+                    business@dpdzero.com
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="form-container">
+            <h1>Contact Us</h1>
+            <form>
+                <input
+                    class="form-elements"
+                    type="text"
+                    id="name"
+                    placeholder="Full Name"
+                    required
+                />
+
+                <input
+                    class="form-elements"
+                    type="email"
+                    id="name"
+                    placeholder="Your Email - e.g xyz@gmail"
+                    required
+                />
+
+                <input
+                    type="text"
+                    id="message"
+                    placeholder="Your Message"
+                    required
+                />
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</main>
+<Footer />
+
+<style>
+    body{
+        margin:0;
+    }
+    .container{
+        margin:0;
+    }
+    .address-fonts {
+        display: flex;
+        flex-direction: column;
+    }
+    .address-fonts :nth-child(1) {
+        font-size: 2rem;
+        color: rgb(15, 15, 63);
+    }
+    .address {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        margin-bottom:20px;
+    }
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-shadow: -1px -1px 0 rgb(1, 0, 0), 2px -1px 0 rgb(2, 2, 2),
+            -1px 1px 0 rgb(2, 2, 2), 1px 1px 0 black;
+
+        padding-left: 4rem;
+        padding-right: 4rem;
+        padding-bottom: 4rem;
+        border: 2px solid black;
+        border-radius: 9px;
+        background: #0f2027; 
+        background: -webkit-linear-gradient(
+            to bottom,
+            #2c5364,
+            #203a43,
+            #0f2027
+        ); 
+        background: linear-gradient(
+            to bottom,
+            #2c5364,
+            #203a43,
+            #0f2027
+        ); 
+
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .form-elements {
+        width: 30rem;
+        height: 4rem;
+        /* padding:10px; */
+        margin-bottom: 20px;
+        padding-left: 10px;
+        border-radius: 8px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    form :nth-child(3) {
+        width: 30rem;
+        height: 7rem;
+        padding-left: 10px;
+        border-radius: 8px;
+    }
+    form :nth-child(4) {
+        width: 15rem;
+        height: 2rem;
+        margin-top: 25px;
+        border-radius: 8px;
+        font-family: monospace;
+        text-shadow: -1px -1px 0 rgb(248, 246, 246),
+            2px -1px 0 rgb(247, 245, 245), -1px 1px 0 rgb(252, 250, 250),
+            1px 1px 0 rgb(248, 246, 246);
+        font-weight: bold;
+        font-size: large;
+    }
+    main {
+        display: flex;
+        height: 80vh;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        background-image: url("https://media.istockphoto.com/id/1287325029/photo/abstract-white-and-gray-gradient-background.webp?b=1&s=170667a&w=0&k=20&c=pTYI24RhbxR6er-n-P-IGVVzwuFRTNT1AaMvfUy0ffw=");
+        background-size: cover;
+        background-position: center;
+    }
+    .left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .right {
+        flex: 1.168;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+</style>

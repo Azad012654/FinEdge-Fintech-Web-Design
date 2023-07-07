@@ -1,0 +1,58 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import IndividualPayment from '../components/Services/IndividualPayment.astro';
+import BusinessPayment from '../components/Services/BusinessPayment.astro';
+import Tracking from '../components/Services/Tracking.astro';
+---
+<main>
+<section>
+    <Header />
+    <BusinessPayment />
+    
+</section>
+<section>
+<IndividualPayment />
+</section>
+<section>
+    <div class="tracking">
+        <Tracking />
+    </div>
+    <Footer />
+</section>
+</main>
+
+
+<style>
+    body{
+        margin:0;
+        box-sizing:border-box;
+        padding:0;
+    }
+    .tracking{
+        height:88vh;
+    }
+    section{
+        height:100vh;
+        scroll-snap-align: start;
+        
+    }
+    main{
+        scroll-snap-type:y mandatory;
+        overflow-y: scroll;
+        
+        height:100vh;
+    }
+    /* main::-webkit-scrollbar {
+    width: 0.5em; 
+    background-color: transparent;
+  }
+
+  main::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 0.25em; 
+  } */
+    
+   
+    
+</style>
